@@ -56,10 +56,11 @@ public interface SkuService {
 
     /**
      * 根据ID查询Sku
+     *
      * @param id
      * @return
      */
-     Sku findById(String id);
+    Sku findById(String id);
 
     /***
      * 查询所有Sku

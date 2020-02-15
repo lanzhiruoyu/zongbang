@@ -56,10 +56,11 @@ public interface SpuService {
 
     /**
      * 根据ID查询Spu
+     *
      * @param id
      * @return
      */
-     Spu findById(String id);
+    Spu findById(String id);
 
     /***
      * 查询所有Spu

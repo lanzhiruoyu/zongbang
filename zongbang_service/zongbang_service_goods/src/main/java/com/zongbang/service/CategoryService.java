@@ -56,10 +56,11 @@ public interface CategoryService {
 
     /**
      * 根据ID查询Category
+     *
      * @param id
      * @return
      */
-     Category findById(Integer id);
+    Category findById(Integer id);
 
     /***
      * 查询所有Category

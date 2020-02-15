@@ -26,15 +26,16 @@ public class PrefServiceImpl implements PrefService {
 
     /**
      * Pref条件+分页查询
+     *
      * @param pref 查询条件
      * @param page 页码
      * @param size 页大小
      * @return 分页结果
      */
     @Override
-    public PageInfo<Pref> findPage(Pref pref, int page, int size){
+    public PageInfo<Pref> findPage(Pref pref, int page, int size) {
         //分页
-        PageHelper.startPage(page,size);
+        PageHelper.startPage(page, size);
         //搜索条件构建
         Example example = createExample(pref);
         //执行搜索
@@ -43,25 +44,27 @@ public class PrefServiceImpl implements PrefService {
 
     /**
      * Pref分页查询
+     *
      * @param page
      * @param size
      * @return
      */
     @Override
-    public PageInfo<Pref> findPage(int page, int size){
+    public PageInfo<Pref> findPage(int page, int size) {
         //静态分页
-        PageHelper.startPage(page,size);
+        PageHelper.startPage(page, size);
         //分页查询
         return new PageInfo<Pref>(prefMapper.selectAll());
     }
 
     /**
      * Pref条件查询
+     *
      * @param pref
      * @return
      */
     @Override
-    public List<Pref> findList(Pref pref){
+    public List<Pref> findList(Pref pref) {
         //构建查询条件
         Example example = createExample(pref);
         //根据构建的条件查询数据
@@ -71,44 +74,45 @@ public class PrefServiceImpl implements PrefService {
 
     /**
      * Pref构建查询对象
+     *
      * @param pref
      * @return
      */
-    public Example createExample(Pref pref){
-        Example example=new Example(Pref.class);
+    public Example createExample(Pref pref) {
+        Example example = new Example(Pref.class);
         Example.Criteria criteria = example.createCriteria();
-        if(pref!=null){
+        if (pref != null) {
             // ID
-            if(!StringUtils.isEmpty(pref.getId())){
-                    criteria.andEqualTo("id",pref.getId());
+            if (!StringUtils.isEmpty(pref.getId())) {
+                criteria.andEqualTo("id", pref.getId());
             }
             // 分类ID
-            if(!StringUtils.isEmpty(pref.getCateId())){
-                    criteria.andEqualTo("cateId",pref.getCateId());
+            if (!StringUtils.isEmpty(pref.getCateId())) {
+                criteria.andEqualTo("cateId", pref.getCateId());
             }
             // 消费金额
-            if(!StringUtils.isEmpty(pref.getBuyMoney())){
-                    criteria.andEqualTo("buyMoney",pref.getBuyMoney());
+            if (!StringUtils.isEmpty(pref.getBuyMoney())) {
+                criteria.andEqualTo("buyMoney", pref.getBuyMoney());
             }
             // 优惠金额
-            if(!StringUtils.isEmpty(pref.getPreMoney())){
-                    criteria.andEqualTo("preMoney",pref.getPreMoney());
+            if (!StringUtils.isEmpty(pref.getPreMoney())) {
+                criteria.andEqualTo("preMoney", pref.getPreMoney());
             }
             // 活动开始日期
-            if(!StringUtils.isEmpty(pref.getStartTime())){
-                    criteria.andEqualTo("startTime",pref.getStartTime());
+            if (!StringUtils.isEmpty(pref.getStartTime())) {
+                criteria.andEqualTo("startTime", pref.getStartTime());
             }
             // 活动截至日期
-            if(!StringUtils.isEmpty(pref.getEndTime())){
-                    criteria.andEqualTo("endTime",pref.getEndTime());
+            if (!StringUtils.isEmpty(pref.getEndTime())) {
+                criteria.andEqualTo("endTime", pref.getEndTime());
             }
             // 类型
-            if(!StringUtils.isEmpty(pref.getType())){
-                    criteria.andEqualTo("type",pref.getType());
+            if (!StringUtils.isEmpty(pref.getType())) {
+                criteria.andEqualTo("type", pref.getType());
             }
             // 状态
-            if(!StringUtils.isEmpty(pref.getState())){
-                    criteria.andEqualTo("state",pref.getState());
+            if (!StringUtils.isEmpty(pref.getState())) {
+                criteria.andEqualTo("state", pref.getState());
             }
         }
         return example;
@@ -116,43 +120,48 @@ public class PrefServiceImpl implements PrefService {
 
     /**
      * 删除
+     *
      * @param id
      */
     @Override
-    public void delete(Integer id){
+    public void delete(Integer id) {
         prefMapper.deleteByPrimaryKey(id);
     }
 
     /**
      * 修改Pref
+     *
      * @param pref
      */
     @Override
-    public void update(Pref pref){
+    public void update(Pref pref) {
         prefMapper.updateByPrimaryKey(pref);
     }
 
     /**
      * 增加Pref
+     *
      * @param pref
      */
     @Override
-    public void add(Pref pref){
+    public void add(Pref pref) {
         prefMapper.insert(pref);
     }
 
     /**
      * 根据ID查询Pref
+     *
      * @param id
      * @return
      */
     @Override
-    public Pref findById(Integer id){
-        return  prefMapper.selectByPrimaryKey(id);
+    public Pref findById(Integer id) {
+        return prefMapper.selectByPrimaryKey(id);
     }
 
     /**
      * 查询Pref全部数据
+     *
      * @return
      */
     @Override

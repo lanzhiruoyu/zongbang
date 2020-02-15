@@ -1,4 +1,5 @@
 package com.zongbang.dao;
+
 import com.zongbang.goods.pojo.Brand;
 import tk.mybatis.mapper.common.Mapper;
 

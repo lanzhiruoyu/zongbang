@@ -56,10 +56,11 @@ public interface PrefService {
 
     /**
      * 根据ID查询Pref
+     *
      * @param id
      * @return
      */
-     Pref findById(Integer id);
+    Pref findById(Integer id);
 
     /***
      * 查询所有Pref

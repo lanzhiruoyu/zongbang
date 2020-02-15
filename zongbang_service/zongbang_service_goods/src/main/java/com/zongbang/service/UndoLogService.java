@@ -56,10 +56,11 @@ public interface UndoLogService {
 
     /**
      * 根据ID查询UndoLog
+     *
      * @param id
      * @return
      */
-     UndoLog findById(Long id);
+    UndoLog findById(Long id);
 
     /***
      * 查询所有UndoLog

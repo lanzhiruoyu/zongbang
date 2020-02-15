@@ -56,10 +56,11 @@ public interface BrandService {
 
     /**
      * 根据ID查询Brand
+     *
      * @param id
      * @return
      */
-     Brand findById(Integer id);
+    Brand findById(Integer id);
 
     /***
      * 查询所有Brand

@@ -56,10 +56,11 @@ public interface AlbumService {
 
     /**
      * 根据ID查询Album
+     *
      * @param id
      * @return
      */
-     Album findById(Long id);
+    Album findById(Long id);
 
     /***
      * 查询所有Album

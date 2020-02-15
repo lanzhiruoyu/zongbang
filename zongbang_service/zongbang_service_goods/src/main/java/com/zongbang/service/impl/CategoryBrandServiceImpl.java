@@ -26,15 +26,16 @@ public class CategoryBrandServiceImpl implements CategoryBrandService {
 
     /**
      * CategoryBrand条件+分页查询
+     *
      * @param categoryBrand 查询条件
-     * @param page 页码
-     * @param size 页大小
+     * @param page          页码
+     * @param size          页大小
      * @return 分页结果
      */
     @Override
-    public PageInfo<CategoryBrand> findPage(CategoryBrand categoryBrand, int page, int size){
+    public PageInfo<CategoryBrand> findPage(CategoryBrand categoryBrand, int page, int size) {
         //分页
-        PageHelper.startPage(page,size);
+        PageHelper.startPage(page, size);
         //搜索条件构建
         Example example = createExample(categoryBrand);
         //执行搜索
@@ -43,25 +44,27 @@ public class CategoryBrandServiceImpl implements CategoryBrandService {
 
     /**
      * CategoryBrand分页查询
+     *
      * @param page
      * @param size
      * @return
      */
     @Override
-    public PageInfo<CategoryBrand> findPage(int page, int size){
+    public PageInfo<CategoryBrand> findPage(int page, int size) {
         //静态分页
-        PageHelper.startPage(page,size);
+        PageHelper.startPage(page, size);
         //分页查询
         return new PageInfo<CategoryBrand>(categoryBrandMapper.selectAll());
     }
 
     /**
      * CategoryBrand条件查询
+     *
      * @param categoryBrand
      * @return
      */
     @Override
-    public List<CategoryBrand> findList(CategoryBrand categoryBrand){
+    public List<CategoryBrand> findList(CategoryBrand categoryBrand) {
         //构建查询条件
         Example example = createExample(categoryBrand);
         //根据构建的条件查询数据
@@ -71,20 +74,21 @@ public class CategoryBrandServiceImpl implements CategoryBrandService {
 
     /**
      * CategoryBrand构建查询对象
+     *
      * @param categoryBrand
      * @return
      */
-    public Example createExample(CategoryBrand categoryBrand){
-        Example example=new Example(CategoryBrand.class);
+    public Example createExample(CategoryBrand categoryBrand) {
+        Example example = new Example(CategoryBrand.class);
         Example.Criteria criteria = example.createCriteria();
-        if(categoryBrand!=null){
+        if (null != categoryBrand) {
             // 分类ID
-            if(!StringUtils.isEmpty(categoryBrand.getCategoryId())){
-                    criteria.andEqualTo("categoryId",categoryBrand.getCategoryId());
+            if (!StringUtils.isEmpty(categoryBrand.getCategoryId())) {
+                criteria.andEqualTo("categoryId", categoryBrand.getCategoryId());
             }
             // 品牌ID
-            if(!StringUtils.isEmpty(categoryBrand.getBrandId())){
-                    criteria.andEqualTo("brandId",categoryBrand.getBrandId());
+            if (!StringUtils.isEmpty(categoryBrand.getBrandId())) {
+                criteria.andEqualTo("brandId", categoryBrand.getBrandId());
             }
         }
         return example;
@@ -92,43 +96,48 @@ public class CategoryBrandServiceImpl implements CategoryBrandService {
 
     /**
      * 删除
+     *
      * @param id
      */
     @Override
-    public void delete(Integer id){
+    public void delete(Integer id) {
         categoryBrandMapper.deleteByPrimaryKey(id);
     }
 
     /**
      * 修改CategoryBrand
+     *
      * @param categoryBrand
      */
     @Override
-    public void update(CategoryBrand categoryBrand){
+    public void update(CategoryBrand categoryBrand) {
         categoryBrandMapper.updateByPrimaryKey(categoryBrand);
     }
 
     /**
      * 增加CategoryBrand
+     *
      * @param categoryBrand
      */
     @Override
-    public void add(CategoryBrand categoryBrand){
+    public void add(CategoryBrand categoryBrand) {
         categoryBrandMapper.insert(categoryBrand);
     }
 
     /**
      * 根据ID查询CategoryBrand
+     *
      * @param id
      * @return
      */
     @Override
-    public CategoryBrand findById(Integer id){
-        return  categoryBrandMapper.selectByPrimaryKey(id);
+    public CategoryBrand findById(Integer id) {
+        return categoryBrandMapper.selectByPrimaryKey(id);
     }
 
     /**
      * 查询CategoryBrand全部数据
+     *
      * @return
      */
     @Override

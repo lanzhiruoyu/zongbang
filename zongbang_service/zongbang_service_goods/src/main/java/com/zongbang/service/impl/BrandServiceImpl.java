@@ -26,15 +26,16 @@ public class BrandServiceImpl implements BrandService {
 
     /**
      * Brand条件+分页查询
+     *
      * @param brand 查询条件
-     * @param page 页码
-     * @param size 页大小
+     * @param page  页码
+     * @param size  页大小
      * @return 分页结果
      */
     @Override
-    public PageInfo<Brand> findPage(Brand brand, int page, int size){
+    public PageInfo<Brand> findPage(Brand brand, int page, int size) {
         //分页
-        PageHelper.startPage(page,size);
+        PageHelper.startPage(page, size);
         //搜索条件构建
         Example example = createExample(brand);
         //执行搜索
@@ -43,25 +44,27 @@ public class BrandServiceImpl implements BrandService {
 
     /**
      * Brand分页查询
+     *
      * @param page
      * @param size
      * @return
      */
     @Override
-    public PageInfo<Brand> findPage(int page, int size){
+    public PageInfo<Brand> findPage(int page, int size) {
         //静态分页
-        PageHelper.startPage(page,size);
+        PageHelper.startPage(page, size);
         //分页查询
         return new PageInfo<Brand>(brandMapper.selectAll());
     }
 
     /**
      * Brand条件查询
+     *
      * @param brand
      * @return
      */
     @Override
-    public List<Brand> findList(Brand brand){
+    public List<Brand> findList(Brand brand) {
         //构建查询条件
         Example example = createExample(brand);
         //根据构建的条件查询数据
@@ -71,32 +74,33 @@ public class BrandServiceImpl implements BrandService {
 
     /**
      * Brand构建查询对象
+     *
      * @param brand
      * @return
      */
-    public Example createExample(Brand brand){
-        Example example=new Example(Brand.class);
+    public Example createExample(Brand brand) {
+        Example example = new Example(Brand.class);
         Example.Criteria criteria = example.createCriteria();
-        if(brand!=null){
+        if (null != brand) {
             // 品牌id
-            if(!StringUtils.isEmpty(brand.getId())){
-                    criteria.andEqualTo("id",brand.getId());
+            if (!StringUtils.isEmpty(brand.getId())) {
+                criteria.andEqualTo("id", brand.getId());
             }
             // 品牌名称
-            if(!StringUtils.isEmpty(brand.getName())){
-                    criteria.andLike("name","%"+brand.getName()+"%");
+            if (!StringUtils.isEmpty(brand.getName())) {
+                criteria.andLike("name", "%" + brand.getName() + "%");
             }
             // 品牌图片地址
-            if(!StringUtils.isEmpty(brand.getImage())){
-                    criteria.andEqualTo("image",brand.getImage());
+            if (!StringUtils.isEmpty(brand.getImage())) {
+                criteria.andEqualTo("image", brand.getImage());
             }
             // 品牌的首字母
-            if(!StringUtils.isEmpty(brand.getLetter())){
-                    criteria.andEqualTo("letter",brand.getLetter());
+            if (!StringUtils.isEmpty(brand.getLetter())) {
+                criteria.andEqualTo("letter", brand.getLetter());
             }
             // 排序
-            if(!StringUtils.isEmpty(brand.getSeq())){
-                    criteria.andEqualTo("seq",brand.getSeq());
+            if (!StringUtils.isEmpty(brand.getSeq())) {
+                criteria.andEqualTo("seq", brand.getSeq());
             }
         }
         return example;
@@ -104,43 +108,48 @@ public class BrandServiceImpl implements BrandService {
 
     /**
      * 删除
+     *
      * @param id
      */
     @Override
-    public void delete(Integer id){
+    public void delete(Integer id) {
         brandMapper.deleteByPrimaryKey(id);
     }
 
     /**
      * 修改Brand
+     *
      * @param brand
      */
     @Override
-    public void update(Brand brand){
+    public void update(Brand brand) {
         brandMapper.updateByPrimaryKey(brand);
     }
 
     /**
      * 增加Brand
+     *
      * @param brand
      */
     @Override
-    public void add(Brand brand){
+    public void add(Brand brand) {
         brandMapper.insert(brand);
     }
 
     /**
      * 根据ID查询Brand
+     *
      * @param id
      * @return
      */
     @Override
-    public Brand findById(Integer id){
-        return  brandMapper.selectByPrimaryKey(id);
+    public Brand findById(Integer id) {
+        return brandMapper.selectByPrimaryKey(id);
     }
 
     /**
      * 查询Brand全部数据
+     *
      * @return
      */
     @Override

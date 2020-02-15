@@ -56,10 +56,11 @@ public interface SpecService {
 
     /**
      * 根据ID查询Spec
+     *
      * @param id
      * @return
      */
-     Spec findById(Integer id);
+    Spec findById(Integer id);
 
     /***
      * 查询所有Spec
