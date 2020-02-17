@@ -144,4 +144,11 @@ public class BrandController {
         List<Brand> list = brandService.findAll();
         return new Result<List<Brand>>(true, StatusCode.OK, "查询成功", list);
     }
+
+
+    @GetMapping(value = "/category/{id}")
+    public Result<List<Brand>> findByCategoryId(@PathVariable(value = "id") Integer categoryId){
+        List<Brand> brands = brandService.findByCategoryId(categoryId);
+        return new Result<List<Brand>>(true, StatusCode.OK, "通过分类查询品牌成功", brands);
+    }
 }

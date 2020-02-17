@@ -67,4 +67,13 @@ public interface SpecService {
      * @return
      */
     List<Spec> findAll();
+
+    /**
+     * @Author HuiLiao
+     * @Description 通过分类查询规格集合
+     * @Date 21:23 2020/2/17
+     * @Param [categoryId]
+     * @return java.util.List<com.zongbang.goods.pojo.Spec>
+     **/
+    List<Spec> findByCategoryId(Integer categoryId);
 }

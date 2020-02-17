@@ -67,4 +67,13 @@ public interface TemplateService {
      * @return
      */
     List<Template> findAll();
+
+    /**
+     * @Author HuiLiao
+     * @Description 通过分类id查找模板
+     * @Date 21:12 2020/2/17
+     * @Param [category]
+     * @return com.zongbang.goods.pojo.Template
+     **/
+    Template findByCategoryId(Integer categoryId);
 }

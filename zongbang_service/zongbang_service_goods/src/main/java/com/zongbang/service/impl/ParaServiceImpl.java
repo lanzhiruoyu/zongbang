@@ -2,7 +2,9 @@ package com.zongbang.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.zongbang.dao.CategoryMapper;
 import com.zongbang.dao.ParaMapper;
+import com.zongbang.goods.pojo.Category;
 import com.zongbang.goods.pojo.Para;
 import com.zongbang.service.ParaService;
 import org.springframework.stereotype.Service;
@@ -22,7 +24,8 @@ public class ParaServiceImpl implements ParaService {
 
     @Resource
     private ParaMapper paraMapper;
-
+    @Resource
+    private CategoryMapper categoryMapper;
 
     /**
      * Para条件+分页查询
@@ -155,5 +158,13 @@ public class ParaServiceImpl implements ParaService {
     @Override
     public List<Para> findAll() {
         return paraMapper.selectAll();
+    }
+
+    @Override
+    public List<Para> findByCategoryId(Integer categoryId) {
+        Category category = categoryMapper.selectByPrimaryKey(categoryId);
+        Para para = new Para();
+        para.setTemplateId(category.getTemplateId());
+        return paraMapper.select(para);
     }
 }

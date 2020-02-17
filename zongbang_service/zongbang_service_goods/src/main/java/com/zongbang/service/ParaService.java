@@ -67,4 +67,13 @@ public interface ParaService {
      * @return
      */
     List<Para> findAll();
+
+    /**
+     * @Author HuiLiao
+     * @Description 通过分类id查询参数
+     * @Date 21:33 2020/2/17
+     * @Param [category]
+     * @return java.util.List<com.zongbang.goods.pojo.Para>
+     **/
+    List<Para> findByCategoryId(Integer categoryId);
 }

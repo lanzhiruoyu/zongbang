@@ -156,4 +156,9 @@ public class BrandServiceImpl implements BrandService {
     public List<Brand> findAll() {
         return brandMapper.selectAll();
     }
+
+    @Override
+    public List<Brand> findByCategoryId(Integer categoryId) {
+        return brandMapper.findByCategoryId(categoryId);
+    }
 }
