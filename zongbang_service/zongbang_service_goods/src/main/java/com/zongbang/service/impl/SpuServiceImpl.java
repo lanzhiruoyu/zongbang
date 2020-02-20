@@ -1,16 +1,23 @@
 package com.zongbang.service.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.zongbang.dao.BrandMapper;
+import com.zongbang.dao.CategoryMapper;
+import com.zongbang.dao.SkuMapper;
 import com.zongbang.dao.SpuMapper;
-import com.zongbang.goods.pojo.Spu;
+import com.zongbang.goods.pojo.*;
+import com.zongbang.pojo.IdWorker;
 import com.zongbang.service.SpuService;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 /****
  * @Author:www.itheima.com
@@ -22,8 +29,14 @@ public class SpuServiceImpl implements SpuService {
 
     @Resource
     private SpuMapper spuMapper;
+    @Resource
+    private SkuMapper skuMapper;
+    @Resource
+    private CategoryMapper categoryMapper;
+    @Resource
+    private BrandMapper brandMapper;
 
-
+    private IdWorker idWorker;
     /**
      * Spu条件+分页查询
      *
@@ -223,5 +236,36 @@ public class SpuServiceImpl implements SpuService {
     @Override
     public List<Spu> findAll() {
         return spuMapper.selectAll();
+    }
+
+    @Override
+    public void saveGoods(Goods goods) {
+        Spu spu = goods.getSpu();
+        spu.setId(idWorker.nextId());
+        Date date = new Date();
+        Category category = categoryMapper.selectByPrimaryKey(spu.getCategory3Id());
+        Brand brand = brandMapper.selectByPrimaryKey(spu.getBrandId());
+        List<Sku> skus = goods.getSkuList();
+        for (Sku sku : skus) {
+            sku.setId(idWorker.nextId());
+            StringBuilder name = new StringBuilder(spu.getName());
+            if (StringUtils.isEmpty(sku.getSpec())){
+                sku.setSpec("{}");
+            }
+            @SuppressWarnings("unchecked")
+            Map<String,String> map = JSON.parseObject(sku.getSpec(), Map.class);
+            for (Map.Entry<String
+                    ,String> entry:
+                 map.entrySet()) {
+                 name.append(entry.getValue());
+            }
+            sku.setName(name.toString());
+            sku.setCreateTime(date);
+            sku.setUpdateTime(date);
+            sku.setSpuId(spu.getId());
+            sku.setCategoryId(category.getId());
+            sku.setCategoryName(category.getName());
+            sku.setBrandName(brand.getName());
+        }
     }
 }

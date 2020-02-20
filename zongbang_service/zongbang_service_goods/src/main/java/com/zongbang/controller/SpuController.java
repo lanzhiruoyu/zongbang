@@ -1,6 +1,7 @@
 package com.zongbang.controller;
 
 import com.github.pagehelper.PageInfo;
+import com.zongbang.goods.pojo.Goods;
 import com.zongbang.goods.pojo.Spu;
 import com.zongbang.service.SpuService;
 import com.zongbang.pojo.Result;
@@ -143,5 +144,11 @@ public class SpuController {
         //调用SpuService实现查询所有Spu
         List<Spu> list = spuService.findAll();
         return new Result<List<Spu>>(true, StatusCode.OK, "查询成功", list);
+    }
+
+    @PostMapping(value = "/save")
+    public Result saveGoods(@RequestBody Goods goods){
+        spuService.saveGoods(goods);
+        return new Result(true, StatusCode.OK, "添加商品成功");
     }
 }

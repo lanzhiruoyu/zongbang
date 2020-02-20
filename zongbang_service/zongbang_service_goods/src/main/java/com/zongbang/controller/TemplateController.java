@@ -144,4 +144,10 @@ public class TemplateController {
         List<Template> list = templateService.findAll();
         return new Result<List<Template>>(true, StatusCode.OK, "查询成功", list);
     }
+
+    @GetMapping(value = "/category/{id}")
+    public Result<Template> findByCategoryId(@PathVariable(value = "id") Integer categoryId){
+        Template template = templateService.findByCategoryId(categoryId);
+        return new Result<Template>(true, StatusCode.OK, "通过分类Id查询成功", template);
+    }
 }

@@ -2,7 +2,9 @@ package com.zongbang.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.zongbang.dao.CategoryMapper;
 import com.zongbang.dao.TemplateMapper;
+import com.zongbang.goods.pojo.Category;
 import com.zongbang.goods.pojo.Template;
 import com.zongbang.service.TemplateService;
 import org.springframework.stereotype.Service;
@@ -23,7 +25,8 @@ public class TemplateServiceImpl implements TemplateService {
     @Resource
     private TemplateMapper templateMapper;
 
-
+    @Resource
+    private CategoryMapper categoryMapper;
     /**
      * Template条件+分页查询
      *
@@ -151,5 +154,11 @@ public class TemplateServiceImpl implements TemplateService {
     @Override
     public List<Template> findAll() {
         return templateMapper.selectAll();
+    }
+
+    @Override
+    public Template findByCategoryId(Integer categoryId) {
+        Category category = categoryMapper.selectByPrimaryKey(categoryId);
+        return templateMapper.selectByPrimaryKey(category.getTemplateId());
     }
 }

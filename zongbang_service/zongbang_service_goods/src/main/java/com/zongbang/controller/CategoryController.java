@@ -130,7 +130,7 @@ public class CategoryController {
     public Result<Category> findById(@PathVariable Integer id) {
         //调用CategoryService实现根据主键查询Category
         Category category = categoryService.findById(id);
-        return new Result<Category>(true, StatusCode.OK, "查询成功", category);
+        return new Result<>(true, StatusCode.OK, "查询成功", category);
     }
 
     /***
@@ -143,5 +143,11 @@ public class CategoryController {
         //调用CategoryService实现查询所有Category
         List<Category> list = categoryService.findAll();
         return new Result<List<Category>>(true, StatusCode.OK, "查询成功", list);
+    }
+
+    @GetMapping(value = "/list/{pid}")
+    public Result<List<Category>> findByParentId(@PathVariable(value = "pid") Integer pid) {
+        List<Category> categories = categoryService.findByParentId(pid);
+        return new Result<>(true, StatusCode.OK, "根据父Id查询成功", categories);
     }
 }

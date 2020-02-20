@@ -2,7 +2,9 @@ package com.zongbang.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.zongbang.dao.CategoryMapper;
 import com.zongbang.dao.SpecMapper;
+import com.zongbang.goods.pojo.Category;
 import com.zongbang.goods.pojo.Spec;
 import com.zongbang.service.SpecService;
 import org.springframework.stereotype.Service;
@@ -23,6 +25,8 @@ public class SpecServiceImpl implements SpecService {
     @Resource
     private SpecMapper specMapper;
 
+    @Resource
+    private CategoryMapper categoryMapper;
 
     /**
      * Spec条件+分页查询
@@ -155,5 +159,13 @@ public class SpecServiceImpl implements SpecService {
     @Override
     public List<Spec> findAll() {
         return specMapper.selectAll();
+    }
+
+    @Override
+    public List<Spec> findByCategoryId(Integer categoryId) {
+        Category category = categoryMapper.selectByPrimaryKey(categoryId);
+        Spec spec = new Spec();
+        spec.setTemplateId(category.getTemplateId());
+        return specMapper.select(spec);
     }
 }

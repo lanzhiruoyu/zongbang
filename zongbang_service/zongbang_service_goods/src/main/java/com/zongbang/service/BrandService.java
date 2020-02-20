@@ -67,4 +67,14 @@ public interface BrandService {
      * @return
      */
     List<Brand> findAll();
+
+
+    /**
+     * @Author HuiLiao
+     * @Description 根据分类Id查找品牌
+     * @Date 20:57 2020/2/17
+     * @Param [categoryId]
+     * @return java.util.List<com.zongbang.goods.pojo.Brand>
+     **/
+    List<Brand> findByCategoryId(Integer categoryId);
 }
