@@ -1,6 +1,7 @@
 package com.zongbang.service;
 
 import com.github.pagehelper.PageInfo;
+import com.zongbang.goods.pojo.Goods;
 import com.zongbang.goods.pojo.Spu;
 
 import java.util.List;
@@ -67,4 +68,13 @@ public interface SpuService {
      * @return
      */
     List<Spu> findAll();
+
+    /**
+     * @Author HuiLiao
+     * @Description 添加商品信息
+     * @Date 23:03 2020/2/17
+     * @Param
+     * @return
+     **/
+    void saveGoods(Goods goods);
 }
