@@ -8,6 +8,7 @@ import com.zongbang.goods.pojo.Category;
 import com.zongbang.goods.pojo.Para;
 import com.zongbang.service.ParaService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 
@@ -114,6 +115,7 @@ public class ParaServiceImpl implements ParaService {
      *
      * @param id
      */
+    @Transactional
     @Override
     public void delete(Integer id) {
         paraMapper.deleteByPrimaryKey(id);
@@ -124,6 +126,7 @@ public class ParaServiceImpl implements ParaService {
      *
      * @param para
      */
+    @Transactional
     @Override
     public void update(Para para) {
         paraMapper.updateByPrimaryKey(para);
@@ -134,6 +137,7 @@ public class ParaServiceImpl implements ParaService {
      *
      * @param para
      */
+    @Transactional
     @Override
     public void add(Para para) {
         paraMapper.insert(para);

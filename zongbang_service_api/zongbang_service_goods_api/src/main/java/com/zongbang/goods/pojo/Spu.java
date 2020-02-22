@@ -92,7 +92,7 @@ public class Spu implements Serializable {
 
     @ApiModelProperty(value = "是否上架", required = false)
     @Column(name = "is_marketable")
-    private String isMarketable;//是否上架
+    private String isMarketable;//是否上架 0已下架，1已上架
 
     @ApiModelProperty(value = "是否启用规格", required = false)
     @Column(name = "is_enable_spec")
@@ -100,11 +100,11 @@ public class Spu implements Serializable {
 
     @ApiModelProperty(value = "是否删除", required = false)
     @Column(name = "is_delete")
-    private String isDelete;//是否删除
+    private String isDelete;//是否删除 0未删除，1已删除
 
     @ApiModelProperty(value = "审核状态", required = false)
     @Column(name = "status")
-    private String status;//审核状态
+    private String status;//审核状态 0未审核，1已审核，3审核不通过
 
 
     //get方法

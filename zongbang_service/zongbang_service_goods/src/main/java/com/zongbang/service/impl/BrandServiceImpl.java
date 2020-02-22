@@ -6,6 +6,7 @@ import com.zongbang.dao.BrandMapper;
 import com.zongbang.goods.pojo.Brand;
 import com.zongbang.service.BrandService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 
@@ -111,6 +112,7 @@ public class BrandServiceImpl implements BrandService {
      *
      * @param id
      */
+    @Transactional
     @Override
     public void delete(Integer id) {
         brandMapper.deleteByPrimaryKey(id);
@@ -121,6 +123,7 @@ public class BrandServiceImpl implements BrandService {
      *
      * @param brand
      */
+    @Transactional
     @Override
     public void update(Brand brand) {
         brandMapper.updateByPrimaryKey(brand);
@@ -131,6 +134,7 @@ public class BrandServiceImpl implements BrandService {
      *
      * @param brand
      */
+    @Transactional
     @Override
     public void add(Brand brand) {
         brandMapper.insert(brand);
