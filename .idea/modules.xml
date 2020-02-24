@@ -9,6 +9,9 @@
       <module fileurl="file://$PROJECT_DIR$/zongbang_parent.iml" filepath="$PROJECT_DIR$/zongbang_parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/zongbang_service/zongbang_service.iml" filepath="$PROJECT_DIR$/zongbang_service/zongbang_service.iml" />
       <module fileurl="file://$PROJECT_DIR$/zongbang_service_api/zongbang_service_api.iml" filepath="$PROJECT_DIR$/zongbang_service_api/zongbang_service_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zongbang_service/zongbang_service_canal/zongbang_service_canal.iml" filepath="$PROJECT_DIR$/zongbang_service/zongbang_service_canal/zongbang_service_canal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zongbang_service/zongbang_service_content/zongbang_service_content.iml" filepath="$PROJECT_DIR$/zongbang_service/zongbang_service_content/zongbang_service_content.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zongbang_service_api/zongbang_service_content_api/zongbang_service_content_api.iml" filepath="$PROJECT_DIR$/zongbang_service_api/zongbang_service_content_api/zongbang_service_content_api.iml" />
       <module fileurl="file://$PROJECT_DIR$/zongbang_service/zongbang_service_file/zongbang_service_file.iml" filepath="$PROJECT_DIR$/zongbang_service/zongbang_service_file/zongbang_service_file.iml" />
       <module fileurl="file://$PROJECT_DIR$/zongbang_service/zongbang_service_goods/zongbang_service_goods.iml" filepath="$PROJECT_DIR$/zongbang_service/zongbang_service_goods/zongbang_service_goods.iml" />
       <module fileurl="file://$PROJECT_DIR$/zongbang_service_api/zongbang_service_goods_api/zongbang_service_goods_api.iml" filepath="$PROJECT_DIR$/zongbang_service_api/zongbang_service_goods_api/zongbang_service_goods_api.iml" />
