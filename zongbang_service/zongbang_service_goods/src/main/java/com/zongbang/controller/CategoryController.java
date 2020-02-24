@@ -1,7 +1,7 @@
 package com.zongbang.controller;
 
 import com.github.pagehelper.PageInfo;
-import com.zongbang.goods.pojo.Category;
+import com.zongbang.pojo.Category;
 import com.zongbang.service.CategoryService;
 import com.zongbang.pojo.Result;
 import com.zongbang.pojo.StatusCode;

@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>zongbang_service_goods_api</module>
+        <module>zongbang_service_content_api</module>
     </modules>
     <dependencies>
         <!--common依赖-->

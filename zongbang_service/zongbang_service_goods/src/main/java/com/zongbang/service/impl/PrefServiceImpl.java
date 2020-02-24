@@ -3,9 +3,10 @@ package com.zongbang.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.zongbang.dao.PrefMapper;
-import com.zongbang.goods.pojo.Pref;
+import com.zongbang.pojo.Pref;
 import com.zongbang.service.PrefService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 
@@ -123,6 +124,7 @@ public class PrefServiceImpl implements PrefService {
      *
      * @param id
      */
+    @Transactional
     @Override
     public void delete(Integer id) {
         prefMapper.deleteByPrimaryKey(id);
@@ -133,6 +135,7 @@ public class PrefServiceImpl implements PrefService {
      *
      * @param pref
      */
+    @Transactional
     @Override
     public void update(Pref pref) {
         prefMapper.updateByPrimaryKey(pref);
@@ -143,6 +146,7 @@ public class PrefServiceImpl implements PrefService {
      *
      * @param pref
      */
+    @Transactional
     @Override
     public void add(Pref pref) {
         prefMapper.insert(pref);

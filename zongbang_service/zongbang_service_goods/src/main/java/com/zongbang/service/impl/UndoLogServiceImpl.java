@@ -3,9 +3,10 @@ package com.zongbang.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.zongbang.dao.UndoLogMapper;
-import com.zongbang.goods.pojo.UndoLog;
+import com.zongbang.pojo.UndoLog;
 import com.zongbang.service.UndoLogService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 
@@ -123,6 +124,7 @@ public class UndoLogServiceImpl implements UndoLogService {
      *
      * @param id
      */
+    @Transactional
     @Override
     public void delete(Long id) {
         undoLogMapper.deleteByPrimaryKey(id);
@@ -133,6 +135,7 @@ public class UndoLogServiceImpl implements UndoLogService {
      *
      * @param undoLog
      */
+    @Transactional
     @Override
     public void update(UndoLog undoLog) {
         undoLogMapper.updateByPrimaryKey(undoLog);
@@ -143,6 +146,7 @@ public class UndoLogServiceImpl implements UndoLogService {
      *
      * @param undoLog
      */
+    @Transactional
     @Override
     public void add(UndoLog undoLog) {
         undoLogMapper.insert(undoLog);

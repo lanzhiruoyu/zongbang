@@ -3,9 +3,10 @@ package com.zongbang.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.zongbang.dao.SkuMapper;
-import com.zongbang.goods.pojo.Sku;
+import com.zongbang.pojo.Sku;
 import com.zongbang.service.SkuService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 
@@ -171,6 +172,7 @@ public class SkuServiceImpl implements SkuService {
      *
      * @param id
      */
+    @Transactional
     @Override
     public void delete(String id) {
         skuMapper.deleteByPrimaryKey(id);
@@ -181,6 +183,7 @@ public class SkuServiceImpl implements SkuService {
      *
      * @param sku
      */
+    @Transactional
     @Override
     public void update(Sku sku) {
         skuMapper.updateByPrimaryKey(sku);
@@ -191,6 +194,7 @@ public class SkuServiceImpl implements SkuService {
      *
      * @param sku
      */
+    @Transactional
     @Override
     public void add(Sku sku) {
         skuMapper.insert(sku);

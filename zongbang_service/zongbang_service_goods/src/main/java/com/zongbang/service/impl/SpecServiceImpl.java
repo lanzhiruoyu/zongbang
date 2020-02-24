@@ -4,10 +4,11 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.zongbang.dao.CategoryMapper;
 import com.zongbang.dao.SpecMapper;
-import com.zongbang.goods.pojo.Category;
-import com.zongbang.goods.pojo.Spec;
+import com.zongbang.pojo.Category;
+import com.zongbang.pojo.Spec;
 import com.zongbang.service.SpecService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 
@@ -115,6 +116,7 @@ public class SpecServiceImpl implements SpecService {
      *
      * @param id
      */
+    @Transactional
     @Override
     public void delete(Integer id) {
         specMapper.deleteByPrimaryKey(id);
@@ -125,6 +127,7 @@ public class SpecServiceImpl implements SpecService {
      *
      * @param spec
      */
+    @Transactional
     @Override
     public void update(Spec spec) {
         specMapper.updateByPrimaryKey(spec);
@@ -135,6 +138,7 @@ public class SpecServiceImpl implements SpecService {
      *
      * @param spec
      */
+    @Transactional
     @Override
     public void add(Spec spec) {
         specMapper.insert(spec);

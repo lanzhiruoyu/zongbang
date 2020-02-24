@@ -3,10 +3,11 @@ package com.zongbang.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.zongbang.dao.AlbumMapper;
-import com.zongbang.goods.pojo.Album;
+import com.zongbang.pojo.Album;
 
 import com.zongbang.service.AlbumService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 
@@ -108,6 +109,7 @@ public class AlbumServiceImpl implements AlbumService {
      *
      * @param id
      */
+    @Transactional
     @Override
     public void delete(Long id) {
         albumMapper.deleteByPrimaryKey(id);
@@ -118,6 +120,7 @@ public class AlbumServiceImpl implements AlbumService {
      *
      * @param album
      */
+    @Transactional
     @Override
     public void update(Album album) {
         albumMapper.updateByPrimaryKey(album);
@@ -128,6 +131,7 @@ public class AlbumServiceImpl implements AlbumService {
      *
      * @param album
      */
+    @Transactional
     @Override
     public void add(Album album) {
         albumMapper.insert(album);

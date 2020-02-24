@@ -4,10 +4,11 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.zongbang.dao.CategoryMapper;
 import com.zongbang.dao.TemplateMapper;
-import com.zongbang.goods.pojo.Category;
-import com.zongbang.goods.pojo.Template;
+import com.zongbang.pojo.Category;
+import com.zongbang.pojo.Template;
 import com.zongbang.service.TemplateService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 
@@ -110,6 +111,7 @@ public class TemplateServiceImpl implements TemplateService {
      *
      * @param id
      */
+    @Transactional
     @Override
     public void delete(Integer id) {
         templateMapper.deleteByPrimaryKey(id);
@@ -120,6 +122,7 @@ public class TemplateServiceImpl implements TemplateService {
      *
      * @param template
      */
+    @Transactional
     @Override
     public void update(Template template) {
         templateMapper.updateByPrimaryKey(template);
@@ -130,6 +133,7 @@ public class TemplateServiceImpl implements TemplateService {
      *
      * @param template
      */
+    @Transactional
     @Override
     public void add(Template template) {
         templateMapper.insert(template);

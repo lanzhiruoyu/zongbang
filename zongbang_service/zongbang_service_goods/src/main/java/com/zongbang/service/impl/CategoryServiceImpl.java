@@ -3,9 +3,10 @@ package com.zongbang.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.zongbang.dao.CategoryMapper;
-import com.zongbang.goods.pojo.Category;
+import com.zongbang.pojo.Category;
 import com.zongbang.service.CategoryService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 
@@ -123,6 +124,7 @@ public class CategoryServiceImpl implements CategoryService {
      *
      * @param id
      */
+    @Transactional
     @Override
     public void delete(Integer id) {
         categoryMapper.deleteByPrimaryKey(id);
@@ -133,6 +135,7 @@ public class CategoryServiceImpl implements CategoryService {
      *
      * @param category
      */
+    @Transactional
     @Override
     public void update(Category category) {
         categoryMapper.updateByPrimaryKey(category);
@@ -143,6 +146,7 @@ public class CategoryServiceImpl implements CategoryService {
      *
      * @param category
      */
+    @Transactional
     @Override
     public void add(Category category) {
         categoryMapper.insert(category);

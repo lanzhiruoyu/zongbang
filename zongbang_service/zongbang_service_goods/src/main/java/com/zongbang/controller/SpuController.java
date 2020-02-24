@@ -1,8 +1,8 @@
 package com.zongbang.controller;
 
 import com.github.pagehelper.PageInfo;
-import com.zongbang.goods.pojo.Goods;
-import com.zongbang.goods.pojo.Spu;
+import com.zongbang.pojo.Goods;
+import com.zongbang.pojo.Spu;
 import com.zongbang.service.SpuService;
 import com.zongbang.pojo.Result;
 import com.zongbang.pojo.StatusCode;
@@ -146,9 +146,72 @@ public class SpuController {
         return new Result<List<Spu>>(true, StatusCode.OK, "查询成功", list);
     }
 
+    /**
+     * @Author HuiLiao
+     * @Description 添加商品信息
+     * @Date 16:57 2020/2/21
+     * @Param [goods]
+     * @return com.zongbang.pojo.Result
+     **/
     @PostMapping(value = "/save")
     public Result saveGoods(@RequestBody Goods goods){
         spuService.saveGoods(goods);
         return new Result(true, StatusCode.OK, "添加商品成功");
+    }
+
+    /**
+     * @Author HuiLiao
+     * @Description 查询商品
+     * @Date 19:19 2020/2/21
+     * @Param [spuId]
+     * @return com.zongbang.pojo.Result<com.zongbang.goods.pojo.Goods>
+     **/
+    @GetMapping(value = "/goods/{id}")
+    public Result<Goods>  findGoodsById(@PathVariable(value = "id") String spuId){
+        Goods goods = spuService.findGoodsById(spuId);
+        return new Result<>(true, StatusCode.OK, "查询成功", goods);
+    }
+
+    /**
+     * @Author HuiLiao
+     * @Description 商品审核
+     * @Date 19:23 2020/2/21
+     * @Param [spuId]
+     * @return com.zongbang.pojo.Result
+     **/
+    @PutMapping(value = "/audit/{id}")
+    public Result audit(@PathVariable(value = "id") String spuId){
+        spuService.audit(spuId);
+        return new Result<>(true, StatusCode.OK, "商品审核成功");
+    }
+
+    @PutMapping(value = "/pull/{id}")
+    public Result pull(@PathVariable(value = "id") String spuId){
+        spuService.pull(spuId);
+        return new Result<>(true, StatusCode.OK, "商品下架成功");
+    }
+
+    @PutMapping(value = "/put/{id}")
+    public Result put(@PathVariable(value = "id") String spuId){
+        spuService.put(spuId);
+        return new Result<>(true, StatusCode.OK, "商品上架成功");
+    }
+
+    @PutMapping(value = "/put/many")
+    public Result putMany(@RequestBody String[] spuIds){
+        spuService.putMany(spuIds);
+        return new Result<>(true, StatusCode.OK, "商品批量上架成功");
+    }
+
+    @PutMapping(value = "/restore/{id}")
+    public Result restore(@PathVariable(value = "id") String spuId){
+        spuService.restore(spuId);
+        return new Result<>(true, StatusCode.OK, "商品找回成功");
+    }
+
+    @DeleteMapping(value = "/put/{id}")
+    public Result realDel(@PathVariable(value = "id") String spuId){
+        spuService.realDel(spuId);
+        return new Result<>(true, StatusCode.OK, "商品彻底删除成功");
     }
 }

@@ -1,7 +1,7 @@
 package com.zongbang.controller;
 
 import com.github.pagehelper.PageInfo;
-import com.zongbang.goods.pojo.UndoLog;
+import com.zongbang.pojo.UndoLog;
 import com.zongbang.service.UndoLogService;
 import com.zongbang.pojo.Result;
 import com.zongbang.pojo.StatusCode;

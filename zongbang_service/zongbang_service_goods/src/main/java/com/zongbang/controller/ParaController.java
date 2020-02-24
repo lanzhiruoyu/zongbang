@@ -1,7 +1,7 @@
 package com.zongbang.controller;
 
 import com.github.pagehelper.PageInfo;
-import com.zongbang.goods.pojo.Para;
+import com.zongbang.pojo.Para;
 import com.zongbang.service.ParaService;
 import com.zongbang.pojo.Result;
 import com.zongbang.pojo.StatusCode;

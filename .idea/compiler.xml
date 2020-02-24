@@ -7,11 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="zongbang_service_file" />
+        <module name="zongbang_service_content" />
         <module name="zongbang_gateway" />
         <module name="zongbang_common_db" />
         <module name="zongbang_service_goods" />
+        <module name="zongbang_service_content_api" />
         <module name="zongbang_common" />
         <module name="zongbang_service_goods_api" />
+        <module name="zongbang_service_canal" />
         <module name="zongbang_eureka" />
         <module name="zongbang_web" />
       </profile>
@@ -19,11 +22,15 @@
     <bytecodeTargetLevel>
       <module name="zongbang_common" target="1.8" />
       <module name="zongbang_common_db" target="1.8" />
+      <module name="zongbang_content" target="1.8" />
       <module name="zongbang_eureka" target="1.8" />
       <module name="zongbang_gateway" target="1.8" />
       <module name="zongbang_parent" target="1.8" />
       <module name="zongbang_service" target="1.8" />
       <module name="zongbang_service_api" target="1.8" />
+      <module name="zongbang_service_canal" target="1.8" />
+      <module name="zongbang_service_content" target="1.8" />
+      <module name="zongbang_service_content_api" target="1.8" />
       <module name="zongbang_service_file" target="1.8" />
       <module name="zongbang_service_goods" target="1.8" />
       <module name="zongbang_service_goods_api" target="1.8" />
@@ -34,8 +41,12 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="zongbang_common" options="-parameters" />
       <module name="zongbang_common_db" options="-parameters" />
+      <module name="zongbang_content" options="-parameters" />
       <module name="zongbang_eureka" options="-parameters" />
       <module name="zongbang_gateway" options="-parameters" />
+      <module name="zongbang_service_canal" options="-parameters" />
+      <module name="zongbang_service_content" options="-parameters" />
+      <module name="zongbang_service_content_api" options="-parameters" />
       <module name="zongbang_service_file" options="-parameters" />
       <module name="zongbang_service_goods" options="-parameters" />
       <module name="zongbang_service_goods_api" options="-parameters" />
