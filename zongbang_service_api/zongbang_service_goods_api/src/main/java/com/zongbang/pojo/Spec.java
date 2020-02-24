@@ -1,4 +1,4 @@
-package com.zongbang.goods.pojo;
+package com.zongbang.pojo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -8,26 +8,26 @@ import java.io.Serializable;
 
 /****
  * @Author:www.itheima.com
- * @Description:Para构建
+ * @Description:Spec构建
  * @Date www.itheima.com 19:13
  *****/
-@ApiModel(description = "Para", value = "Para")
-@Table(name = "tb_para")
-public class Para implements Serializable {
+@ApiModel(description = "Spec", value = "Spec")
+@Table(name = "tb_spec")
+public class Spec implements Serializable {
 
-    @ApiModelProperty(value = "id", required = false)
+    @ApiModelProperty(value = "ID", required = false)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer id;//id
+    private Integer id;//ID
 
     @ApiModelProperty(value = "名称", required = false)
     @Column(name = "name")
     private String name;//名称
 
-    @ApiModelProperty(value = "选项", required = false)
+    @ApiModelProperty(value = "规格选项", required = false)
     @Column(name = "options")
-    private String options;//选项
+    private String options;//规格选项
 
     @ApiModelProperty(value = "排序", required = false)
     @Column(name = "seq")

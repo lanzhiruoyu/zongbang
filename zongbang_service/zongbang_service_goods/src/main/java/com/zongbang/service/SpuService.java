@@ -1,8 +1,8 @@
 package com.zongbang.service;
 
 import com.github.pagehelper.PageInfo;
-import com.zongbang.goods.pojo.Goods;
-import com.zongbang.goods.pojo.Spu;
+import com.zongbang.pojo.Goods;
+import com.zongbang.pojo.Spu;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.zongbang.goods.pojo;
+package com.zongbang.pojo;
 
 import java.io.Serializable;
 import java.util.List;

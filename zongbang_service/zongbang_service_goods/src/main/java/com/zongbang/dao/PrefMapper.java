@@ -1,6 +1,6 @@
 package com.zongbang.dao;
 
-import com.zongbang.goods.pojo.Pref;
+import com.zongbang.pojo.Pref;
 import tk.mybatis.mapper.common.Mapper;
 
 /****

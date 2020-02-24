@@ -3,7 +3,7 @@ package com.zongbang.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.zongbang.dao.CategoryMapper;
-import com.zongbang.goods.pojo.Category;
+import com.zongbang.pojo.Category;
 import com.zongbang.service.CategoryService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,6 +1,6 @@
 package com.zongbang.dao;
 
-import com.zongbang.goods.pojo.Spu;
+import com.zongbang.pojo.Spu;
 import tk.mybatis.mapper.common.Mapper;
 
 /****

@@ -5,7 +5,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.zongbang.dao.*;
 import com.zongbang.goods.pojo.*;
-import com.zongbang.pojo.IdWorker;
+import com.zongbang.pojo.*;
 import com.zongbang.service.SpuService;
 import org.assertj.core.util.Arrays;
 import org.springframework.stereotype.Service;

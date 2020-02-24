@@ -1,7 +1,7 @@
 package com.zongbang.service;
 
 import com.github.pagehelper.PageInfo;
-import com.zongbang.goods.pojo.UndoLog;
+import com.zongbang.pojo.UndoLog;
 
 import java.util.List;
 

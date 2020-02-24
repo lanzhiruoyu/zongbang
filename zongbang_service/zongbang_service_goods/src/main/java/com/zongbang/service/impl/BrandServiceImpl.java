@@ -3,7 +3,7 @@ package com.zongbang.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.zongbang.dao.BrandMapper;
-import com.zongbang.goods.pojo.Brand;
+import com.zongbang.pojo.Brand;
 import com.zongbang.service.BrandService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

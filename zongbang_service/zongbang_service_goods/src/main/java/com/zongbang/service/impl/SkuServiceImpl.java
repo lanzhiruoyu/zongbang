@@ -3,7 +3,7 @@ package com.zongbang.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.zongbang.dao.SkuMapper;
-import com.zongbang.goods.pojo.Sku;
+import com.zongbang.pojo.Sku;
 import com.zongbang.service.SkuService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

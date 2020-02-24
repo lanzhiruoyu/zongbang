@@ -3,7 +3,7 @@ package com.zongbang.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.zongbang.dao.AlbumMapper;
-import com.zongbang.goods.pojo.Album;
+import com.zongbang.pojo.Album;
 
 import com.zongbang.service.AlbumService;
 import org.springframework.stereotype.Service;

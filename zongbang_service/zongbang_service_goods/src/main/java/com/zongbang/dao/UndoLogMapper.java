@@ -1,6 +1,6 @@
 package com.zongbang.dao;
 
-import com.zongbang.goods.pojo.UndoLog;
+import com.zongbang.pojo.UndoLog;
 import tk.mybatis.mapper.common.Mapper;
 
 /****

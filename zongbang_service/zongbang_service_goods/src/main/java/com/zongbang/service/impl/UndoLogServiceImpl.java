@@ -3,7 +3,7 @@ package com.zongbang.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.zongbang.dao.UndoLogMapper;
-import com.zongbang.goods.pojo.UndoLog;
+import com.zongbang.pojo.UndoLog;
 import com.zongbang.service.UndoLogService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

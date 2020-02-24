@@ -1,8 +1,8 @@
 package com.zongbang.controller;
 
 import com.github.pagehelper.PageInfo;
-import com.zongbang.goods.pojo.Goods;
-import com.zongbang.goods.pojo.Spu;
+import com.zongbang.pojo.Goods;
+import com.zongbang.pojo.Spu;
 import com.zongbang.service.SpuService;
 import com.zongbang.pojo.Result;
 import com.zongbang.pojo.StatusCode;

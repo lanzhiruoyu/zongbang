@@ -3,7 +3,7 @@ package com.zongbang.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.zongbang.dao.PrefMapper;
-import com.zongbang.goods.pojo.Pref;
+import com.zongbang.pojo.Pref;
 import com.zongbang.service.PrefService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

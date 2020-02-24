@@ -1,7 +1,7 @@
 package com.zongbang.service;
 
 import com.github.pagehelper.PageInfo;
-import com.zongbang.goods.pojo.Brand;
+import com.zongbang.pojo.Brand;
 
 import java.util.List;
 

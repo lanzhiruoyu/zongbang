@@ -1,4 +1,4 @@
-package com.zongbang.goods.pojo;
+package com.zongbang.pojo;
 
 import javax.persistence.Id;
 import javax.persistence.Table;
