@@ -67,4 +67,13 @@ public interface SkuService {
      * @return
      */
     List<Sku> findAll();
+
+    /**
+     * @Author HuiLiao
+     * @Description 根据审核状态查询Sku列表
+     * @Date 13:02 2020/2/26
+     * @Param [status]
+     * @return java.util.List<com.zongbang.pojo.Sku>
+     **/
+    List<Sku> findByStatus(String status);
 }

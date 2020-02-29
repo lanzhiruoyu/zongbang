@@ -15,6 +15,8 @@
       <module fileurl="file://$PROJECT_DIR$/zongbang_service/zongbang_service_file/zongbang_service_file.iml" filepath="$PROJECT_DIR$/zongbang_service/zongbang_service_file/zongbang_service_file.iml" />
       <module fileurl="file://$PROJECT_DIR$/zongbang_service/zongbang_service_goods/zongbang_service_goods.iml" filepath="$PROJECT_DIR$/zongbang_service/zongbang_service_goods/zongbang_service_goods.iml" />
       <module fileurl="file://$PROJECT_DIR$/zongbang_service_api/zongbang_service_goods_api/zongbang_service_goods_api.iml" filepath="$PROJECT_DIR$/zongbang_service_api/zongbang_service_goods_api/zongbang_service_goods_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zongbang_service/zongbang_service_search/zongbang_service_search.iml" filepath="$PROJECT_DIR$/zongbang_service/zongbang_service_search/zongbang_service_search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zongbang_service_api/zongbang_service_search_api/zongbang_service_search_api.iml" filepath="$PROJECT_DIR$/zongbang_service_api/zongbang_service_search_api/zongbang_service_search_api.iml" />
       <module fileurl="file://$PROJECT_DIR$/zongbang_web/zongbang_web.iml" filepath="$PROJECT_DIR$/zongbang_web/zongbang_web.iml" />
     </modules>
   </component>

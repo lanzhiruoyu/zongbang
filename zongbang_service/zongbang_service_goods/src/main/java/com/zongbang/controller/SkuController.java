@@ -144,4 +144,11 @@ public class SkuController {
         List<Sku> list = skuService.findAll();
         return new Result<List<Sku>>(true, StatusCode.OK, "查询成功", list);
     }
+
+
+    @GetMapping(value = "/status/{status}")
+    public Result<List<Sku>> findByStatus(@PathVariable String status){
+        List<Sku> list = skuService.findByStatus(status);
+        return new Result<List<Sku>>(true, StatusCode.OK, "根据审核状态查询成功", list);
+    }
 }
