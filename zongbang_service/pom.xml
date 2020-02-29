@@ -17,6 +17,7 @@
         <module>zongbang_service_canal</module>
         <module>zongbang_service_content</module>
         <module>zongbang_service_content</module>
+        <module>zongbang_service_search</module>
     </modules>
 
     <dependencies>
