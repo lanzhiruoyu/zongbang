@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/zongbang_service/zaongbang_service_user/zaongbang_service_user.iml" filepath="$PROJECT_DIR$/zongbang_service/zaongbang_service_user/zaongbang_service_user.iml" />
       <module fileurl="file://$PROJECT_DIR$/zongbang_common/zongbang_common.iml" filepath="$PROJECT_DIR$/zongbang_common/zongbang_common.iml" />
       <module fileurl="file://$PROJECT_DIR$/zongbang_common_db/zongbang_common_db.iml" filepath="$PROJECT_DIR$/zongbang_common_db/zongbang_common_db.iml" />
       <module fileurl="file://$PROJECT_DIR$/zongbang_eureka/zongbang_eureka.iml" filepath="$PROJECT_DIR$/zongbang_eureka/zongbang_eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/zongbang_gateway/zongbang_gateway.iml" filepath="$PROJECT_DIR$/zongbang_gateway/zongbang_gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zongbang_gateway/zongbang_gateway_web/zongbang_gateway_web.iml" filepath="$PROJECT_DIR$/zongbang_gateway/zongbang_gateway_web/zongbang_gateway_web.iml" />
       <module fileurl="file://$PROJECT_DIR$/zongbang_parent.iml" filepath="$PROJECT_DIR$/zongbang_parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/zongbang_service/zongbang_service.iml" filepath="$PROJECT_DIR$/zongbang_service/zongbang_service.iml" />
       <module fileurl="file://$PROJECT_DIR$/zongbang_service_api/zongbang_service_api.iml" filepath="$PROJECT_DIR$/zongbang_service_api/zongbang_service_api.iml" />
@@ -17,6 +19,7 @@
       <module fileurl="file://$PROJECT_DIR$/zongbang_service_api/zongbang_service_goods_api/zongbang_service_goods_api.iml" filepath="$PROJECT_DIR$/zongbang_service_api/zongbang_service_goods_api/zongbang_service_goods_api.iml" />
       <module fileurl="file://$PROJECT_DIR$/zongbang_service/zongbang_service_search/zongbang_service_search.iml" filepath="$PROJECT_DIR$/zongbang_service/zongbang_service_search/zongbang_service_search.iml" />
       <module fileurl="file://$PROJECT_DIR$/zongbang_service_api/zongbang_service_search_api/zongbang_service_search_api.iml" filepath="$PROJECT_DIR$/zongbang_service_api/zongbang_service_search_api/zongbang_service_search_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zongbang_service_api/zongbang_service_user_api/zongbang_service_user_api.iml" filepath="$PROJECT_DIR$/zongbang_service_api/zongbang_service_user_api/zongbang_service_user_api.iml" />
       <module fileurl="file://$PROJECT_DIR$/zongbang_web/zongbang_web.iml" filepath="$PROJECT_DIR$/zongbang_web/zongbang_web.iml" />
     </modules>
   </component>

@@ -95,6 +95,8 @@
     <orderEntry type="library" name="Maven: com.netflix.hystrix:hystrix-core:1.5.18" level="project" />
     <orderEntry type="library" name="Maven: org.hdrhistogram:HdrHistogram:2.1.9" level="project" />
     <orderEntry type="library" name="Maven: com.github.wxpay:wxpay-sdk:0.0.3" level="project" />
+    <orderEntry type="library" name="Maven: io.jsonwebtoken:jjwt:0.9.0" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.10.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.10" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.12" level="project" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.13" level="project" />
@@ -151,7 +153,6 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.10.0" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.10.0" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.10.0" level="project" />
     <orderEntry type="library" name="Maven: com.netflix.eureka:eureka-core:1.9.13" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.fasterxml.woodstox:woodstox-core:5.2.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.codehaus.woodstox:stax2-api:4.2" level="project" />
@@ -184,6 +185,7 @@
     <orderEntry type="module" module-name="zongbang_service_goods_api" />
     <orderEntry type="library" name="Maven: javax.persistence:persistence-api:1.0" level="project" />
     <orderEntry type="module" module-name="zongbang_service_content_api" />
+    <orderEntry type="module" module-name="zongbang_service_user_api" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-test:2.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-test:2.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-test-autoconfigure:2.2.0.RELEASE" level="project" />

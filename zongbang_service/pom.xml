@@ -18,6 +18,7 @@
         <module>zongbang_service_content</module>
         <module>zongbang_service_content</module>
         <module>zongbang_service_search</module>
+        <module>zaongbang_service_user</module>
     </modules>
 
     <dependencies>
@@ -43,6 +44,11 @@
         <dependency>
             <groupId>com.zongbang</groupId>
             <artifactId>zongbang_service_content_api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zongbang</groupId>
+            <artifactId>zongbang_service_user_api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
